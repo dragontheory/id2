@@ -22,30 +22,36 @@ html, body {
 
 page-container {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  
+  grid-template-rows: auto;
+  gap: 1rem;
   height: 100vh;
-  overflow: hidden;
-
+  overflow: auto;
   background-image: url( '/assets/images/logos/seal.svg' );
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-page-scroll {
-  display: grid;
-  overflow-y: auto;
-  
-  gap: 1rem;
-  padding: 1rem;
-  height: 100%;
+page-logo {
+ position: absolute;
+ z-index: 1;
 }
 
 page-panel {
   display: grid;
   padding: 1rem;
   overflow: none;
+  position: relative;
   border: solid 1px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+page-panel:nth-of-type(1) {
+  padding: 0;
+  border: none;
+}
+video {
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
