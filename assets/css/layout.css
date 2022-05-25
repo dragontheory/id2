@@ -25,14 +25,10 @@ page-container {
   grid-template-rows: auto;
   gap: 1rem;
   height: 100vh;
-  overflow: auto;
+  overflow-x: hidden;
   background-image: url( '/assets/images/logos/seal.svg' );
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-page-logo {
- z-index: 1;
 }
 
 page-panel {
@@ -48,7 +44,25 @@ page-panel {
 page-panel:nth-of-type(1) {
   padding: 0;
   border: none;
+  height: 100vh;
 }
+
+page-logo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 100px;
+  font-family: sans-serif;
+  /* Mix Blend Mode does the all magic */
+  /* mix-blend-mode: multiply; */
+  user-select: none;
+}
+
+
 video {
   width: 100%;
   height: auto;
