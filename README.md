@@ -1,2 +1,2 @@
 # International.Dance
-International.Dance new mobile first redesign
+International.Dance new mobile first web application redesign
